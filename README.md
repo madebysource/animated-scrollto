@@ -1,4 +1,4 @@
-# Animated scrollTo <a href="http://bower.io/search/?q=animated-scrollto"><img src="//benschwarz.github.io/bower-badges/badge@2x.png" width="130" height="30"></a>
+# Animated scrollTo <a href="http://bower.io/search/?q=animated-scrollto"><img src="https://benschwarz.github.io/bower-badges/badge@2x.png" width="130" height="30"></a>
 
 This is a simple function for animating scroll.
 
