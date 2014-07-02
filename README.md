@@ -18,7 +18,7 @@ button.addEventListener('click', function () {
 });
 ```
 
-This will scroll to top of the page and the animation will run for 10 seconds (1000ms).
+This will scroll to top of the page and the animation will run for 10 seconds (10000ms).
 
 ## Available on Bower
 
