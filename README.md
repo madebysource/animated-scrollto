@@ -28,12 +28,12 @@ Just import with `<script>` and global function `animatedScrollTo` will be avail
 
 ## Available with Browserify
 
-`npm install animatedScrollTo`
+`npm install animated-scrollto`
 
 In your browserify powered js:
 
 ```javascript
-var animatedScrollTo = require('animatedScrollTo')
+var animatedScrollTo = require('animated-scrollto')
 ```
 
 ## License
