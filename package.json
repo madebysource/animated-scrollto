@@ -1,5 +1,5 @@
 {
-  "name": "animatedScrollTo",
+  "name": "animated-scrollto",
   "version": "1.0.0",
   "description": "Animated scrolling without any dependency on libraries",
   "main": "animatedScrollTo.js",
