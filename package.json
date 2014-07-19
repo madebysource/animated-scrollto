@@ -1,0 +1,15 @@
+{
+  "name": "animatedScrollTo",
+  "version": "1.0.0",
+  "description": "Animated scrolling without any dependency on libraries",
+  "main": "animatedScrollTo.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/madebysource/animatedScrollTo"
+  },
+  "bugs": {
+    "url": "https://github.com/madebysource/animatedScrollTo/issues"
+  },
+  "author": "Marek Hrabe <marekhrabe@abdoc.net> (https://github.com/marekhrabe)",
+  "license": "MIT"
+}
