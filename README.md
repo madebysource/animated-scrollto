@@ -24,6 +24,18 @@ This will scroll to top of the page and the animation will run for 10 seconds (1
 
 `bower install animated-scrollto`
 
+Just import with `<script>` and global function `animatedScrollTo` will be available for you.
+
+## Available with Browserify
+
+`npm install animatedScrollTo`
+
+In your browserify powered js:
+
+```javascript
+var animatedScrollTo = require('animatedScrollTo')
+```
+
 ## License
 
 MIT
