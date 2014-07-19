@@ -41,5 +41,9 @@
         requestAnimFrame(animateScroll);
     };
 
-    window.animatedScrollTo = animatedScrollTo;
+    if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+        module.exports = animatedScrollTo;
+    } else {
+        window.animatedScrollTo = animatedScrollTo;
+    }
 })(window);
