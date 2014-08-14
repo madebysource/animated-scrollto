@@ -8,7 +8,7 @@
         return -c/2 * (t*(t-2) - 1) + b;
     };
 
-    var animatedScrollTo = function (element, to, duration) {
+    var animatedScrollTo = function (element, to, duration, callback) {
         var start = element.scrollTop,
         change = to - start,
         animationStart = +new Date();
@@ -36,6 +36,7 @@
             if (now > animationStart + duration) {
                 element.scrollTop = to;
                 animating = false;
+                if (callback) { callback(); }
             }
         };
         requestAnimFrame(animateScroll);
