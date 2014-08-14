@@ -5,10 +5,10 @@
   "main": "animatedScrollTo.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/madebysource/animatedScrollTo"
+    "url": "https://github.com/madebysource/animated-scrollto"
   },
   "bugs": {
-    "url": "https://github.com/madebysource/animatedScrollTo/issues"
+    "url": "https://github.com/madebysource/animated-scrollto/issues"
   },
   "author": "Marek Hrabe <marekhrabe@abdoc.net> (https://github.com/marekhrabe)",
   "license": "MIT"
