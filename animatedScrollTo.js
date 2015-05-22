@@ -19,6 +19,11 @@
             if (!animating) {
                 return;
             }
+
+            if (element === document.body || element === document.documentElement){
+                element = getScrollingElement();
+            }
+
             requestAnimFrame(animateScroll);
             var now = +new Date();
             var val = Math.floor(easeInOutQuad(now - animationStart, start, change, duration));
@@ -41,6 +46,14 @@
         };
         requestAnimFrame(animateScroll);
     };
+
+    function getScrollingElement() {
+        var d = document;
+        return  d.documentElement.scrollHeight > d.body.scrollHeight &&
+        d.compatMode.indexOf('CSS1') == 0 ?
+            d.documentElement :
+            d.body;
+    }
 
     if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
         module.exports = animatedScrollTo;
