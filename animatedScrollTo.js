@@ -47,6 +47,14 @@
         requestAnimFrame(animateScroll);
     };
 
+    /*
+    *
+    * Author: Diego Perini
+    * Updated: 2014/09/18
+    * License: MIT
+    * Gist: https://gist.github.com/dperini/ac3d921d6a08f10fd10e
+    *
+    */
     function getScrollingElement() {
         var d = document;
         return  d.documentElement.scrollHeight > d.body.scrollHeight &&
