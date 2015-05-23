@@ -38,7 +38,7 @@
                 lastpos = val;
                 element.scrollTop = val;
             }
-            if (now > animationStart + duration) {
+            if (now > animationStart + duration || isBottomPage()) {
                 element.scrollTop = to;
                 animating = false;
                 if (callback) { callback(); }
@@ -61,6 +61,16 @@
         d.compatMode.indexOf('CSS1') == 0 ?
             d.documentElement :
             d.body;
+    }
+
+    var isBottomPage = function(){
+        element = getScrollingElement();
+        var scrollTop = element.scrollTop;
+        var scrolledToBottom = (scrollTop + window.innerHeight) >= element.scrollHeight;
+
+        if(scrolledToBottom){
+            return true;
+        }
     }
 
     if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
