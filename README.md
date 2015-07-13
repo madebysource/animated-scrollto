@@ -6,6 +6,10 @@ This is a simple function for animating scroll.
 - If user scrolls while animation is running, scroll animation would be immediately canceled.
 - Use as a single script or through bower.
 
+## Browser support
+
+- If you want full browser support include this library: https://github.com/mathiasbynens/document.scrollingElement
+
 ## Example usage
 
 ```javascript
