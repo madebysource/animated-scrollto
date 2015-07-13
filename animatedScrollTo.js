@@ -10,8 +10,8 @@
 
     var animatedScrollTo = function (element, to, duration, callback) {
         var start = element.scrollTop,
-        change = to - start,
-        animationStart = +new Date();
+            change = to - start,
+            animationStart = +new Date();
         var animating = true;
         var lastpos = null;
 
@@ -19,11 +19,6 @@
             if (!animating) {
                 return;
             }
-
-            if (element === document.body || element === document.documentElement){
-                element = getScrollingElement();
-            }
-
             requestAnimFrame(animateScroll);
             var now = +new Date();
             var val = Math.floor(easeInOutQuad(now - animationStart, start, change, duration));
@@ -38,40 +33,24 @@
                 lastpos = val;
                 element.scrollTop = val;
             }
-            if (now > animationStart + duration || isBottomPage()) {
+            if (now > animationStart + duration || isBottomPage(element)) {
                 element.scrollTop = to;
                 animating = false;
                 if (callback) { callback(); }
             }
         };
+
         requestAnimFrame(animateScroll);
-    };
 
-    /*
-    *
-    * Author: Diego Perini
-    * Updated: 2014/09/18
-    * License: MIT
-    * Gist: https://gist.github.com/dperini/ac3d921d6a08f10fd10e
-    *
-    */
-    function getScrollingElement() {
-        var d = document;
-        return  d.documentElement.scrollHeight > d.body.scrollHeight &&
-        d.compatMode.indexOf('CSS1') == 0 ?
-            d.documentElement :
-            d.body;
-    }
+        var isBottomPage = function(element){
+            var scrollTop = element.scrollTop;
+            var scrolledToBottom = (scrollTop + window.innerHeight) >= element.scrollHeight;
 
-    var isBottomPage = function(){
-        element = getScrollingElement();
-        var scrollTop = element.scrollTop;
-        var scrolledToBottom = (scrollTop + window.innerHeight) >= element.scrollHeight;
-
-        if(scrolledToBottom){
-            return true;
+            if(scrolledToBottom){
+                return true;
+            }
         }
-    }
+    };
 
     if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
         module.exports = animatedScrollTo;
