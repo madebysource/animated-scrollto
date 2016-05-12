@@ -1,10 +1,10 @@
-# Animated scrollTo <a href="http://bower.io/search/?q=animated-scrollto"><img src="https://benschwarz.github.io/bower-badges/badge@2x.png" width="130" height="30"></a>
+# Animated scrollTo
 
 This is a simple function for animating scroll.
 
 - No dependency on extra libraries.
 - If user scrolls while animation is running, scroll animation would be immediately canceled.
-- Use as a single script or through bower.
+- Use as a single script or through browserify/webpack.
 
 ## Example usage
 
@@ -23,17 +23,15 @@ button.addEventListener('click', function () {
 
 This will scroll to top of the page and the animation will run for 10 seconds (10000ms).
 
-## Available on Bower
+## Import as an external script
 
-`bower install animated-scrollto`
-
-Just import with `<script>` and global function `animatedScrollTo` will be available for you.
+Just import this library with `<script>` and global function `animatedScrollTo` will be available for you.
 
 ## Available with Browserify
 
 `npm install animated-scrollto`
 
-In your browserify powered js:
+In your browserify/webpack powered js:
 
 ```javascript
 var animatedScrollTo = require('animated-scrollto')
