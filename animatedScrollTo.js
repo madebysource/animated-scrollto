@@ -21,18 +21,8 @@
             }
             requestAnimFrame(animateScroll);
             var now = +new Date();
-            var val = Math.floor(easeInOutQuad(now - animationStart, start, change, duration));
-            if (lastpos) {
-                if (lastpos === element.scrollTop) {
-                    lastpos = val;
-                    element.scrollTop = val;
-                } else {
-                    animating = false;
-                }
-            } else {
-                lastpos = val;
-                element.scrollTop = val;
-            }
+            lastpos = element.scrollTop = Math.floor(easeInOutQuad(now - animationStart, start, change, duration));
+
             if (now > animationStart + duration) {
                 element.scrollTop = to;
                 animating = false;
