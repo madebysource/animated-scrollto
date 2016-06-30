@@ -21,6 +21,7 @@
 
         var animateScroll = function() {
             if (!animating) {
+                if (callback) { callback(); }
                 return;
             }
             requestAnimFrame(animateScroll);
@@ -40,7 +41,6 @@
             if (now > animationStart + duration) {
                 element[direction] = to;
                 animating = false;
-                if (callback) { callback(); }
             }
         };
         requestAnimFrame(animateScroll);
