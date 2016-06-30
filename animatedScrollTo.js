@@ -8,8 +8,12 @@
         return -c/2 * (t*(t-2) - 1) + b;
     };
 
-    var animatedScrollTo = function (element, to, duration, callback) {
-        var start = element.scrollTop,
+    var animatedScrollTo = function (element, to, duration, scrollLeft, callback) {
+        
+        var direction = 'scrollTop'
+        if (scrollLeft) direction = 'scrollLeft'
+        
+        var start = element[direction],
         change = to - start,
         animationStart = +new Date();
         var animating = true;
@@ -23,18 +27,18 @@
             var now = +new Date();
             var val = Math.floor(easeInOutQuad(now - animationStart, start, change, duration));
             if (lastpos) {
-                if (lastpos === element.scrollTop) {
+                if (lastpos === element[direction]) {
                     lastpos = val;
-                    element.scrollTop = val;
+                    element[direction] = val;
                 } else {
                     animating = false;
                 }
             } else {
                 lastpos = val;
-                element.scrollTop = val;
+                element[direction] = val;
             }
             if (now > animationStart + duration) {
-                element.scrollTop = to;
+                element[direction] = to;
                 animating = false;
                 if (callback) { callback(); }
             }
