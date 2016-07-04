@@ -17,6 +17,7 @@ button.addEventListener('click', function () {
         function() { // callback function that runs after the animation (optional)
           console.log('done!')
         }
+        //, 'scrollLeft' // Optional argument to change the document property that animates, defaults to 'scrollTop'
     );
 });
 ```
