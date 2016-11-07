@@ -23,8 +23,8 @@
             var now = +new Date();
             var val = Math.floor(easeInOutQuad(now - animationStart, start, change, duration));
             if (lastpos === element.scrollTop) {
-                lastpos = val;
                 element.scrollTop = val;
+                lastpos = element.scrollTop;
             } else {
                 animating = false;
             }
