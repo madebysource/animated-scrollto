@@ -40,6 +40,9 @@
             }
         };
         requestAnimFrame(animateScroll);
+        return function cancel() {
+            animating = false;
+        };
     };
 
     if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
