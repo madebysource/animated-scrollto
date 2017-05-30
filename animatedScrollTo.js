@@ -33,7 +33,7 @@
                 lastpos = val;
                 element.scrollTop = val;
             }
-            if (now > animationStart + duration) {
+            if (now > animationStart + duration || element.scrollTop == to) {
                 element.scrollTop = to;
                 animating = false;
                 if (callback) { callback(); }
